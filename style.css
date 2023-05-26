@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+
+@keyframes vibrar {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@keyframes cursor {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #f0ba33;
+    }
+}
+
+
+@keyframes escrevendo {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+#container {
+    display:flex;
+    align-items: start;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/car-4361321_1280.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+}
+
+#vel-box {
+    position: relative;
+    top: 100px;
+    color: #fff;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+}
+
+.es {
+    display: inline-block;
+}
+
+.titulo {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #f0ba33;
+    border-right: 2.5px solid #f0ba33;
+    animation: cursor .5s infinite, escrevendo 1.5s steps(28, end);
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+
+input {
+    width: 65%;
+    outline: none;
+    padding: 20px;
+    margin-bottom: 35px;
+    color: #f0ba33;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #182120;
+    border: none;
+    border-bottom: 1px solid #3f4d4e;
+    border-radius: 10px;
+}
+
+input[type=number]::placeholder {
+ color:#f0ba33;
+}
+
+input[type=button] {
+    cursor: pointer;
+    transition: 1s;
+    animation: vibrar 0.5s ease-in-out infinite both;
+}
+
+p {
+    margin: 30px 0;
+    color: #f0ba33;
+    text-shadow: -1px 3px 3px black;
+    font-size: 2em;
+}
